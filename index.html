@@ -14,15 +14,15 @@
     <form class="container bg-white rounded-3 shadow-lg">
         <div class="row d-flex justify-content-center my-4">
             <div class="col-3 d-flex flex-column">
-                <h3 class="text-center lead fw-bold color_magenta">Nome Cognome</h3>
-                <input class="w-75 align-self-center my-2" type="text" aria-label="input nome e cognome">
+                <label class="text-center lead fw-bold color_magenta">Nome Cognome</label>
+                <input class="w-75 align-self-center my-2 form-control" type="text" id="name" aria-label="input nome e cognome">
             </div>
             <div class="col-3 d-flex flex-column">
-                <h3 class="text-center lead fw-bold color_magenta">Km da percorrere</h3>
-                <input class="w-75 align-self-center my-2" type="number" aria-label="input chilometri da percorrere">
+                <label class="text-center lead fw-bold color_magenta">Km da percorrere</label>
+                <input class="w-75 align-self-center my-2" type="number" id="inputChilometri" aria-label="input chilometri da percorrere">
             </div>
             <div class="col-3 d-flex flex-column">
-                <h3 class="text-center lead fw-bold color_magenta">Fascia d'età</h3>
+                <label class="text-center lead fw-bold color_magenta">Fascia d'età</label>
                 <select class="w-75 align-self-center my-2" name="fasciaEta" id="fasciaEta" aria-label="input fascia d'età">
                     <option value="minorenne">Minorenne</option>
                     <option value="maggiorenne">Maggiorenne</option>
@@ -31,13 +31,13 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center my-4">
-            <button type="submit" style="width: 150px;" class="btn btn-light border-2 mx-3 btn-outline-warning color_magenta fw-bold">Genera</button>
-            <button type="button" style="width: 150px;" class="btn btn-light border-2 mx-3 btn-outline-warning color_magenta fw-bold">Annulla</button>
+            <button type="button" id="btnGenera" style="width: 150px;" class="btn btn-light border-2 mx-3 btn-outline-warning color_magenta fw-bold">Genera</button>
+            <button type="button" id="btnAnnulla" style="width: 150px;" class="btn btn-light border-2 mx-3 btn-outline-warning color_magenta fw-bold">Annulla</button>
         </div>
     </form>
 
     <h2 class="text-uppercase text-white fw-bold text-center my-3 col-12">il tuo biglietto</h2>
-    <section class="container bg-white p-3">
+    <section id="bigliettoGenerato" class="d-none container bg-white p-3">
         <h5 class="text-uppercase fw-bold mt-1 mx-1">dettaglio passeggeri</h5>
         <div class="row mx-1 border-top border-bottom">
             <div class="col bg_grey pb-5">
@@ -46,19 +46,19 @@
             </div>
             <div class="col ms-2 mt-3 d-flex flex-column">
                 <h6 class="fw-bold">Offerta</h6>
-                <span class="mt-4 mb-2">Biglietto Standard</span>
+                <span id="offerta" class="mt-4 mb-2">Biglietto Standard</span>
             </div>
             <div class="col ms-2 mt-3 d-flex flex-column">
                 <h6 class="fw-bold">Carrozza</h6>
-                <span class="mt-4 mb-2">5</span>
+                <span id="numeroCarrozza" class="mt-4 mb-2"></span>
             </div>
             <div class="col ms-2 mt-3 d-flex flex-column">
                 <h6 class="fw-bold">Codice CP</h6>
-                <span class="mt-4 mb-2">92911</span>
+                <span id="codiceCP" class="mt-4 mb-2"></span>
             </div>
             <div class="col ms-2 mt-3 d-flex flex-column">
                 <h6 class="fw-bold">Costo biglietto</h6>
-                <span class="mt-4 mb-2">€2.10</span>
+                <span id="costoBiglietto" class="mt-4 mb-2">€2.10</span>
             </div>
         </div>
     </section>
